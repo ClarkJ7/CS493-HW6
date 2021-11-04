@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+  <div class="card">
+    <h5 class="card-header">Welcome!</h5>
+    <div class="card-body">
+      <h5 class="card-title">Hit the button below!</h5>
+      <p class="card-text">By hitting the button below you will be redirected by this client to a Google Server
+        to with the following parameters for an Authorization Request where the user (you) will authenticate and authorize.</p>
+      <ul>
+        <li>client_id: provided by Google Cloud Platform</li>
+        <li>redirect_uri: defined in Google Cloud Platform</li>
+        <li>response_type: code</li>
+        <li>scope: profile</li>
+        <li>state: unique value</li>
+      </ul>
+      <a href="{{ url_for('initial_request') }}" class="btn btn-primary">Go </a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</body>
+</html>
